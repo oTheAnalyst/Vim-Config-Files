@@ -16,8 +16,10 @@ install.packages('httpg')
 
 To create an R profile use the following command:
 
-```shell
-touch ~/.Rprofile```
+``shell
+touch ~/.Rprofile
+``
+
 than nano into ``~/.Rprofile`` and copy paste this:
 
 ```r
