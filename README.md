@@ -10,7 +10,8 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 Dependencies in R:
 ```r 
-install.packages('httpg')
+install.packages("httpgd")
+install.packages("languageserver")
 ```
 
 
