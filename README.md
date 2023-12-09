@@ -9,12 +9,15 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## Custom .Rprofile file
 
 Dependencies in R:
-``` install.packages('httpg') ```
+```r 
+install.packages('httpg')
+```
 
 
 To create an R profile use the following command:
 
-``` touch ~/.Rprofile```
+```shell
+touch ~/.Rprofile```
 than nano into ``~/.Rprofile`` and copy paste this:
 
 ```r
