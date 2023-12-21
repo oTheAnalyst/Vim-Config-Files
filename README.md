@@ -25,8 +25,9 @@ than nano into ``~/.Rprofile`` and copy paste this:
 
 ```r
 
-view_xl <- function(.data) {
-  if (interactive()) {
+
+view_xl <- function(.data){
+  if(interactive()){
     tmp <- tempfile(fileext = ".csv")
     data.table::fwrite(.data, tmp)
     browseURL(tmp, browser = "gnumeric")
@@ -34,6 +35,7 @@ view_xl <- function(.data) {
 }
 
 httpgd::hgd()
+
 
 options(reactable.theme = reactable::reactableTheme(
           color = "hsl(233, 9%, 87%)",
@@ -70,7 +72,9 @@ view <- function(.data){
 }
 
 
-print(".Rprofile loaded successfully")
+.libPaths(c(.libPaths(), "~/Rpackages/"))
+.libPaths(c(.libPaths(), "~/R/x86_64-pc-linux-gnu-library/4.3/"))
 
+print(".Rprofile loaded successfully")
 
 ```
