@@ -24,3 +24,22 @@ local function insert_data_report_template()
 end
 
 vim.api.nvim_create_user_command("DataReportTemplate", insert_data_report_template, {})
+
+vim.g.R_rconsole_split_direction = "right"
+
+-- Check if GUI is running or if termguicolors is enabled
+if vim.fn.has("gui_running") == 1 or vim.o.termguicolors then
+  -- Define colors for different types of content
+  vim.g.rout_color_input = "guifg=#9e9e9e"
+  vim.g.rout_color_normal = "guifg=#ff5f00"
+  -- ... Add all the other color definitions here ...
+  vim.g.rout_color_error = "guifg=#ffffff guibg=#c40000"
+elseif vim.o.t_Co == "256" then
+  -- For 256-color terminals
+  vim.g.rout_color_input = "ctermfg=247"
+  vim.g.rout_color_normal = "ctermfg=39"
+  -- ... Add all the other 256-color definitions here ...
+end
+
+-- To have R output highlighted using the current colorscheme
+vim.g.rout_follow_colorscheme = 1
