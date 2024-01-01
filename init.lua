@@ -8,6 +8,8 @@ require("plugins.tokyonight")
 require("lspconfig").r_language_server.setup({})
 require("lspconfig").texlab.setup({})
 
+vim.g.R_rconsole_split = "vertical right"
+
 vim.o.clipboard = "unnamedplus"
 vim.cmd([[colorscheme tokyonight-night]])
 
@@ -24,8 +26,6 @@ local function insert_data_report_template()
 end
 
 vim.api.nvim_create_user_command("DataReportTemplate", insert_data_report_template, {})
-
-vim.g.R_rconsole_split_direction = "right"
 
 -- Check if GUI is running or if termguicolors is enabled
 if vim.fn.has("gui_running") == 1 or vim.o.termguicolors then
