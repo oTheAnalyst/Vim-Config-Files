@@ -5,9 +5,32 @@ require("plugins.ncm-R")
 require("plugins.open-browser")
 require("plugins.vimtex")
 require("plugins.tokyonight")
+require("plugins.vim-dadbod")
+require("plugins.nvim-cmp")
 require("lspconfig").r_language_server.setup({})
 require("lspconfig").texlab.setup({})
-
+require("lspconfig").sqls.setup({
+  cmd = { "/home/pretender/go/bin/sqls", "-config", "/home/pretender/.sqls.yaml" }, -- Adjust the path to sqls as per your installation
+  settings = {
+    sqls = {
+      connections = {
+        {
+          driver = "sqlite3",
+          dataSourceName = "/home/pretender/workbook/citrixuserdata.db",
+        },
+        {
+          driver = "sqlite3",
+          dataSourceName = "/home/pretender/workbook/Disaster_Data.db",
+        },
+        {
+          driver = "sqlite3",
+          dataSourceName = "/home/pretender/workbook/trade_union_data.db",
+        },
+      },
+    },
+  },
+})
+-- Add your specific configuration for sqls here
 vim.g.R_rconsole_split = "vertical right"
 
 vim.o.clipboard = "unnamedplus"

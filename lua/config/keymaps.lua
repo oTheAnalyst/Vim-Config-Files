@@ -2,6 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("i", "<C-S-m>", "<Space>%>%<Space>", { desc = "Pipe Operator" })
+vim.keymap.set("i", "MM", "<Space>%>%<Space>", { desc = "Pipe Operator" })
 --httpgd short cut for browser
 vim.keymap.set("n", "<leader>hb", ':call SendToR("httpgd::hgd_browse()")<CR>', { desc = "Httpgd Server Activated" })
