@@ -39,7 +39,7 @@ vim.cmd([[colorscheme tokyonight-night]])
 vim.g.vimtex_view_method = "zathura"
 
 local function insert_data_report_template()
-  local template_path = "/home/pretender/LaTeX/templates/data_analysis_template.tex" -- Replace with your actual full path
+  local template_path = "/home/pretender/LaTeX/templates/data_analysis_template.tex"
   local lines = vim.fn.readfile(template_path)
   if #lines == 0 then
     print("Template file not found: " .. template_path)
@@ -49,6 +49,18 @@ local function insert_data_report_template()
 end
 
 vim.api.nvim_create_user_command("DataReportTemplate", insert_data_report_template, {})
+
+local function RmdTemplate()
+  local template_path = "/home/pretender/LaTeX/templates/arxiv.Rmd"
+  local lines = vim.fn.readfile(template_path)
+  if #lines == 0 then
+    print("Template file not found: " .. template_path)
+    return
+  end
+  vim.api.nvim_buf_set_lines(0, 0, 0, false, lines)
+end
+
+vim.api.nvim_create_user_command("Rmd", RmdTemplate, {})
 
 -- Check if GUI is running or if termguicolors is enabled
 if vim.fn.has("gui_running") == 1 or vim.o.termguicolors then
@@ -66,3 +78,5 @@ end
 
 -- To have R output highlighted using the current colorscheme
 vim.g.rout_follow_colorscheme = 1
+
+vim.g.tar_browser = "brave"

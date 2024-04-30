@@ -2,7 +2,7 @@ return {
   -- ncm2 - base completion engine
   {
     "ncm2/ncm2",
-    lazy = false, -- Load on startup as it's a core completion engine
+    lazy = true, -- Load on startup as it's a core completion engine
     -- Additional ncm2 configuration here
   },
   -- ncm-R - R language support for ncm2

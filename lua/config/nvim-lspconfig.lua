@@ -7,7 +7,6 @@ return {
       require("lspconfig")["r_language_server"].setup({
         -- Optional: add settings for the R language server here
       })
-
       -- Texlab setup for LaTeX
       require("lspconfig")["texlab"].setup({
         -- Optional: add settings for the Texlab language server here
