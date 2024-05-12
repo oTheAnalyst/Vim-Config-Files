@@ -15,6 +15,12 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
+- clone the repo
+
+```
+git clone https://github.com/VtheRtech/Vim-Config-Files.git
+```
+
 
 
 ## Custom .Rprofile file
