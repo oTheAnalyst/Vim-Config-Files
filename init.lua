@@ -73,5 +73,4 @@ elseif vim.o.t_Co == "256" then
 end
 
 -- Highlight R output using the current colorscheme
-vim.g.rout_follow_colorscheme = 1
 vim.g.tar_browser = "brave"
