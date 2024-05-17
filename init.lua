@@ -1,6 +1,7 @@
 -- Bootstrap lazy.nvim, LazyVim, and your plugins
 require("config.lazy")
 require("plugins.ncm-R")
+require("plugins.img-clip")
 require("plugins.open-browser")
 require("plugins.vimtex")
 require("plugins.tokyonight")
