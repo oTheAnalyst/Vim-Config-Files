@@ -4,7 +4,7 @@
 -- config/autocmds.lua
 local autocomplete_group = vim.api.nvim_create_augroup("vimrc_autocompletion", { clear = true })
 
-vim.api.nvim_command("autocmd BufWritePre *.R :%s/\\s\\+$//e")
+--vim.api.nvim_command("autocmd BufWritePre *.R :%s/\\s\\+$//e")
 
 local cmp = require("cmp")
 

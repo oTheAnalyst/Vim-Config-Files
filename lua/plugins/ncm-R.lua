@@ -8,7 +8,7 @@ return {
   -- ncm-R - R language support for ncm2
   {
     "gaalcaras/ncm-R",
-    ft = { "r", "rmd" }, -- Lazy load for R and R Markdown files
+    ft = { "r", "rmd", "R", "Rmd" }, -- Lazy load for R and R Markdown files
     requires = { "ncm2/ncm2" }, -- Ensure ncm2 is loaded with it
   },
   -- Other plugin configurations...

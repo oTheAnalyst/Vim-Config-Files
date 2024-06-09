@@ -9,8 +9,7 @@ require("plugins.vim-dadbod")
 require("plugins.nvim-cmp")
 require("plugins.cmp-r")
 require("plugins.r-nvim")
-require("plugins.nvim-treesitter")
-require("plugins.tree-sitter-r")
+require("plugins.rtreesitter")
 require("plugins.tree-sitter-markdown")
 require("plugins.tree-sitter-latex")
 require("plugins.nvim-autopairs")
@@ -34,10 +33,10 @@ require("lspconfig").sqls.setup({
 -- Set specific configurations for plugins and Vim
 vim.g.R_rconsole_split = "vertical right"
 vim.o.clipboard = "unnamedplus"
-vim.cmd([[colorscheme tokyonight-night]])
+vim.cmd([[colorscheme slate]])
 vim.g.vimtex_view_method = "zathura"
 
--- Define custom commands
+-- templates
 local function insert_data_report_template()
   local template_path = "/home/pretender/LaTeX/templates/data_analysis_template.tex"
   local lines = vim.fn.readfile(template_path)
@@ -60,7 +59,7 @@ local function RmdTemplate()
   vim.api.nvim_buf_set_lines(0, 0, 0, false, lines)
 end
 
-vim.api.nvim_create_user_command("Rmd", RmdTemplate, {})
+vim.api.nvim_create_user_command("Rmdarxuc", RmdTemplate, {})
 
 -- Customize colors based on GUI or terminal settings
 if vim.fn.has("gui_running") == 1 or vim.o.termguicolors then

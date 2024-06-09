@@ -1,9 +1,12 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.ui.mini-animate",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
-    "NEWS.md": "4828"
+    "NEWS.md": "5950"
   },
-  "version": 3
+  "version": 6
 }
