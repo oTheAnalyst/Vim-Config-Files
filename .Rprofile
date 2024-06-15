@@ -1,3 +1,7 @@
+options(width = 100)
+.libPaths(c(.libPaths(), "~/Rpackages/"))
+.libPaths(c(.libPaths(), "~/R/x86_64-pc-linux-gnu-library/4.3/"))
+
 options(
   languageserver.server_capabilities =
     list(
@@ -6,8 +10,4 @@ options(
     )
 )
 
-
-# Custom startup messages
-cat("\nWelcome to R!\n")
-cat("Local library path: ", local_lib, "\n")
-cat("Loaded packages: ", paste(essential_packages, collapse = ", "), "\n\n")
+print(".Rprofile branch -> minimal has loaded successfully")
