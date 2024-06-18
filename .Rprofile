@@ -10,4 +10,19 @@ options(
     )
 )
 
+options(
+  browser = "brave",
+  reactable.theme = reactable::reactableTheme(
+    color = "hsl(233, 9%, 87%)",
+    backgroundColor = "#002b36",
+    borderColor = "#eee8d5",
+    stripedColor = "#586e75",
+    highlightColor = "#6c71c4",
+    inputStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
+    selectStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
+    pageButtonHoverStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
+    pageButtonActiveStyle = list(backgroundColor = "hsl(233, 9%, 28%)")
+  )
+)
+
 print(".Rprofile branch -> minimal has loaded successfully")
