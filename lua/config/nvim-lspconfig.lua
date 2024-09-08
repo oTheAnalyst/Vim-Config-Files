@@ -12,9 +12,6 @@ return {
         -- Optional: add settings for the Texlab language server here
         -- For example, customizing on_attach, capabilities, settings, etc.
       })
-      require("lspconfig")["nixd"].setup({
-        -- Optional setup
-      })
 
       -- SQLs setup for SQL
       require("lspconfig").sqls.setup({
