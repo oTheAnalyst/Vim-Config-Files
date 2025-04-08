@@ -8,8 +8,8 @@ require("plugins.tokyonight")
 require("plugins.vim-dadbod")
 require("plugins.nvim-cmp")
 require("plugins.cmp-r")
-require("plugins.r-nvim")
 require("plugins.rtreesitter")
+require("plugins.r-nvim")
 require("plugins.tree-sitter-markdown")
 require("plugins.tree-sitter-latex")
 require("plugins.nvim-autopairs")
@@ -33,7 +33,7 @@ require("lspconfig").sqls.setup({
 -- Set specific configurations for plugins and Vim
 vim.g.R_rconsole_split = "vertical right"
 vim.o.clipboard = "unnamedplus"
-vim.cmd([[colorscheme slate]])
+vim.cmd([[colorscheme Blue]])
 vim.g.vimtex_view_method = "zathura"
 
 -- templates
@@ -72,4 +72,4 @@ elseif vim.o.t_Co == "256" then
 end
 
 -- Highlight R output using the current colorscheme
-vim.g.tar_browser = "brave"
+vim.g.tar_browser = "zen"
